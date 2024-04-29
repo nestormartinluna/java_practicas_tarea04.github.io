@@ -1,0 +1,33 @@
+.fondoP{
+    background-color: #1a244a;
+}
+@font-face {
+    font-family: Disney;
+    src: url(fonts/waltograph42.otf);
+}
+header{
+    font-family: Disney, Verdana, Tahoma, sans-serif;
+    color: white;
+    font-size: 32px;
+}
+footer{
+    background-color: #0e0b14;
+    color: rgb(45, 38, 38);
+}
+.img1{
+    width: 150px;
+    height: 80px;
+    border: #1A1D29 outset 2px;
+    margin-right: 10px;
+    margin-left: 10px
+}
+.contenedor{
+    display: flex;
+    justify-content:center ;
+}
+.titulo2{
+    color: white;
+}
+p{
+    color: #f5f6f8;
+}
