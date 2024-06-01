@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+    <link rel="stylesheet" href="css/detalles.css">
+</head>
+<body class="fondoP">
+    <header>
+		<h3><left>Aviones de combate</left></h3>
+	</header>
+    <main>
+        <section>
+            <h3><left>Registro de Usuarios</left></h3>
+			<form action="" onsubmit="return showFormData();">
+                <fieldset class="marco1">
+                    <legend style="color: rgb(2, 122, 152)"><b><i>1. DATOS DEL USUARIO</i></b></legend>											
+                    <label for="nombre">Nombre:</label>															
+                    <input size="30" type="text" name="Nombre" placeholder="Indicar nombres del pasajero.">			
+                    <label for="apellido">Apellido:</label>														
+                    <input size="30" type="text" name="Apellido" placeholder="Indicar apellidos del pasajero.">																					
+                    <label for="dni">Documento de identidad:</label>													
+                    <input size="20" type="text" name="DNI" placeholder="Indicar nro. de documento.">
+                    <br><br>
+                    <label for="FechaNac">Fecha Nac.(dd/mm/aa)</label>												
+                    <input type="date" name="FechaNac">	
+                    <label for="nacionalidad">Nacionalidad:</label>															
+                    <input type="text" size="25" name="Nacionalidad" placeholder="Indicar nacionalidad del pasajero.">
+					Género																			
+                        <input type="radio" name="genero" value="masculino" checked="">Masculino						
+                        <input type="radio" name="genero" value="femenino">Femenino	
+                    <label for="telefono">Telefono celular:</label>														
+                    <input type="tel" name="Telefono celular" placeholder="Indicar nro. de telefono.">							
+                    <br>																					
+                </fieldset><br>
+                <fieldset class="marco1">
+                    <legend style="color: rgb(2, 122, 152)"><b><i>2. DATOS DE SUBSCRIPCION</i></b></legend>
+                    <p><b><left>Tipo de subscripcion</left></b></p>
+                    <input type="radio" name="tipoSubscripcion" value="Por 1 mes" checked="">Por 1 mes
+                    <input type="radio" name="tipoSubscripcion" value="Por 3 meses">Por 3 meses
+					<input type="radio" name="tipoSubscripcion" value="Por 6 meses">Por 6 meses
+					<input type="radio" name="tipoSubscripcion" value="Por 1 año">Por 1 año
+                    <br>
+                    <p><b><left>Tipo de abono</left></b></p>
+                    <input type="radio" name="tipoAbono" value="Por transferencia" checked="">Por transferencia. Detallar CBU o Alias CBU<br><textarea name="comentarios" rows="2" cols="101"></textarea><br>
+                    <input type="radio" name="tipoAbono" value="Por debito automatico">Por debito automatico. Detallar Banco, Sucursal y Nro.Cta.bancaria<br><textarea name="comentarios" rows="2" cols="101"></textarea><br>
+					<input type="radio" name="tipoAbono" value="Por tarjeta de debito/credito">Por tarjeta de credito/debito. Nro.Tarj.Cred./Deb., Fecha de Venc. y Cod.Seg.<br><textarea name="comentarios" rows="2" cols="101"></textarea><br>
+                </fieldset><br>
+                <input type="submit" value="Enviar">
+                <button type="reset">Reset</button>
+            </form>
+        </section>
+    </main>
+    <footer><center><b><i><span>SoftForm SRL</span></i></b></center></footer>
+	<script>
+		function showFormData(){
+			const nombre=document.getElementsByName("Nombre")[0].value
+			const apellido=document.getElementsByName("Apellido")[0].value
+			const dni=document.getElementsByName("DNI")[0].value
+			const fechanac=document.getElementsByName("FechaNac")[0].value
+			const nacionalidad=document.getElementsByName("Nacionalidad")[0].value			
+			alert(`Datos de Usuario a enviar.\n -Nombre: ${nombre}\n -Apellido: ${apellido}\n -DNI: ${dni}\n -Fecha Nacimiento: ${fechanac}\n -Nacionalidad: ${nacionalidad}\n`)
+			window.location.replace("../index.html")
+			return false
+		}
+	</script>
+</body></html>
