@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de aeronaves</title>
+	<link rel="stylesheet" href="css/detalles.css">
+	<link rel="icon" href="https://raw.githubusercontent.com/nestormartinluna/java_practicas_tarea04.github.io/main/css/img/f22raptor_ico_reduc50y50.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .weather-info {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="fondoP">
+    <h1><i>Aviones de combate</i></h1>
+	<h3><i>Consulta de aeronaves</i></h3>
+    <input type="text" id="cityInput" placeholder="Ingrese nombre de aeronave">
+    <button onclick="getWeather()">Obtener aeronave</button>
+    
+    <div class="weather-info" id="weatherInfo"></div>
+
+    <script src="script.js"></script>
+</body>
+<footer>
+    <center><a href="../index.html" target="_blank" style="color: yellow"><p><i>Inicio</i></p></a></center>
+</footer>
+</html>
